@@ -17,12 +17,15 @@ public class Day1Controller {
     public void basics() {
 
         List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        
         int sum = numbers.stream()
                 .reduce(0, Integer::sum);
+
         Optional<Integer> max = numbers.stream()
                 .max(Integer::compareTo);
 
         System.out.println("Sum: " + sum);
+
         max.ifPresent(n -> System.out.println("Max: " + n));
     }
 }
