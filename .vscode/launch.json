@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "KeyEnc",
+            "request": "launch",
+            "mainClass": "com.example.day7.KeyEnc",
+            "projectName": "day7"
+        },
+        {
+            "type": "java",
+            "name": "Argon",
+            "request": "launch",
+            "mainClass": "com.example.day7.Argon",
+            "projectName": "day7"
+        },
+        {
+            "type": "java",
+            "name": "BCrypt",
+            "request": "launch",
+            "mainClass": "com.example.day7.BCrypt",
+            "projectName": "day7"
+        },
+        {
+            "type": "java",
+            "name": "BCrypt",
+            "request": "launch",
+            "mainClass": "main.java.com.example.day7.BCrypt",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-Day4Application<day4>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
