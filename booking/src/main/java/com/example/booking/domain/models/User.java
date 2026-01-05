@@ -3,13 +3,14 @@ package com.example.booking.domain.models;
 import java.util.UUID;
 
 public class User {
+
     
-    private UUID id;
+    private final UUID id;
     private String name;
     private String email;
     private String phone;
     private String passwordHash;
-    private Role role;
+    private final Role role;
     private Boolean isActive;
 
     
@@ -27,6 +28,22 @@ public class User {
 
     public void deactivate() {
         this.isActive = false;
+    }
+
+    public void activate() {
+        this.isActive = true;
+    }
+
+    public void updateContactInfo(String name, String email, String phone) {
+        // Assuming email and phone are validated before calling this method
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public void updatePassword(String newPasswordHash) {
+        // Assuming password strength is validated before calling this method
+        this.passwordHash = newPasswordHash;
     }
 
     // Getters
@@ -48,7 +65,7 @@ public class User {
     public Role getRole() {
         return role;
     }
-    public Boolean isActive() {
+    public Boolean getIsActive() {
         return isActive;
     }
 }

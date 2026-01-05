@@ -6,8 +6,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Component;
 
 import com.example.booking.domain.models.User;
-import com.example.booking.infrastructure.persistence.JpaUserRepository;
-import com.example.booking.infrastructure.persistence.UserEntity;
+import com.example.booking.infrastructure.persistence.Entities.UserEntity;
 import com.example.booking.interfaces.UserMapper;
 
 

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.booking.domain.models.Role;
 import com.example.booking.interfaces.Login.JwtService;
-import com.example.booking.interfaces.Login.RefreshTokens;
+import com.example.booking.interfaces.Login.RefreshTokenStore;
 import com.example.booking.interfaces.Rest.DTOs.RefreshTokenResponse;
 
 
@@ -14,9 +14,10 @@ import com.example.booking.interfaces.Rest.DTOs.RefreshTokenResponse;
 public class RefreshTokenUseCase {
     
     private final JwtService jwtService;
-    private final RefreshTokens refreshTokens;
+    private final RefreshTokenStore refreshTokens;
     
-    RefreshTokenUseCase(JwtService jwtService, RefreshTokens refreshTokens) {
+    @SuppressWarnings("unused")
+    RefreshTokenUseCase(JwtService jwtService, RefreshTokenStore refreshTokens) {
         this.jwtService = jwtService;
         this.refreshTokens = refreshTokens;
     }

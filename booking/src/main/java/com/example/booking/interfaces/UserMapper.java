@@ -3,7 +3,7 @@ package com.example.booking.interfaces;
 import org.mapstruct.Mapper;
 
 import com.example.booking.domain.models.User;
-import com.example.booking.infrastructure.persistence.UserEntity;
+import com.example.booking.infrastructure.persistence.Entities.UserEntity;
 
 
 @Mapper(componentModel = "spring")

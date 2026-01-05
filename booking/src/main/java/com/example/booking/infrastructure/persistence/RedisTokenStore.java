@@ -6,10 +6,10 @@ import java.util.UUID;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
-import com.example.booking.interfaces.Login.RefreshTokens;
+import com.example.booking.interfaces.Login.RefreshTokenStore;
 
 @Component
-public class RedisTokenStore implements RefreshTokens{
+public class RedisTokenStore implements RefreshTokenStore{
     
     private final StringRedisTemplate redisTemplate;
 

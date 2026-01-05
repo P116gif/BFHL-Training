@@ -1,0 +1,15 @@
+ADMIN
+ ├─ Create Venue
+ ├─ Create Auditorium
+ ├─ Define Seat Layout 
+ ├─ Create Event
+ ├─ Create Show (draft)
+ └─ Publish Show
+        ├─ Lock auditorium layout
+        └─ Initialize seat availability
+
+USER
+ ├─ Register
+ ├─ Login
+ ├─ Search Event 
+ ├─ Book Tickets

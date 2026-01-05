@@ -1,7 +1,6 @@
 package com.example.booking.infrastructure.security;
 
 import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.UUID;
 
@@ -18,7 +17,7 @@ import io.jsonwebtoken.security.Keys;
 public class JwtServiceImplementation implements JwtService {
 
     private final Key key = Keys.hmacShaKeyFor(
-        Base64.getDecoder().decode("your-256-bit-secret-your-256-bit")
+    "your-very-long-secret-key-at-least-32-bytes".getBytes()
     );
 
     private final long accessTokenTtl = 15 * 60 * 1000; // 15 min

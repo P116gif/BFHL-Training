@@ -1,4 +1,4 @@
-package com.example.booking.infrastructure.persistence;
+package com.example.booking.infrastructure.persistence.Entities;
 
 import java.util.UUID;
 
