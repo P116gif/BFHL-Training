@@ -15,27 +15,28 @@ import com.example.booking.application.Events.VenueUseCase;
 import com.example.booking.infrastructure.persistence.Entities.VenueEntity;
 
 @RestController
-@RequestMapping("/admin/venues")
-@PreAuthorize("hasRole('ADMIN')")
+@RequestMapping("/venues")
 public class VenueController {
     
     private final VenueUseCase venue;
 
+    
     public VenueController(VenueUseCase venue){
         this.venue = venue;
     }
 
-    @PostMapping("/create")
+    @PostMapping("/admin/create")
     public VenueEntity createVenue(@RequestBody VenueEntity venueEntity){
         return venue.createVenue(venueEntity);
     }
 
+    @PreAuthorize("permitAll()")
     @GetMapping("/listAllVenues")
     public List<VenueEntity> listVenues(){
         return venue.listVenues();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("admin/delete/{id}")
     public void deleteVenue(@PathVariable Long id){
         venue.deleteVenue(id);
     }

@@ -11,7 +11,7 @@ import com.example.booking.application.Events.SeatBookingUseCase;
 import com.example.booking.interfaces.Rest.DTOs.JwtPrincipal;
 
 @RestController
-@RequestMapping("/shows/{showId}/seats/{seatId}")
+@RequestMapping("/api")
 public class SeatBookingController {
 
     private final SeatBookingUseCase seatBookingUseCase;
